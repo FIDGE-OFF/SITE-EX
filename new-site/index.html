@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новини України | Укрінформ</title>
+    <link id="theme-style" rel="stylesheet" href="styles/light-theme.css">
+    <style>
+        /* Інлайн стилі для гарантії завантаження */
+        body { margin: 0; font-family: Arial, sans-serif; }
+        .loading { padding: 50px; text-align: center; }
+        .error { color: red; text-align: center; padding: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="site-title">Новини України</h1>
+            <div class="controls">
+                <button id="theme-toggle">🌙</button>
+                <select id="language-selector">
+                    <option value="uk">Українська</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Пошук...">
+                <button id="search-btn">Шукати</button>
+                <button id="refresh-btn">Оновити</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div id="news-container" class="loading">Завантаження...</div>
+    </main>
+
+    <script src="scripts/news-loader.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
